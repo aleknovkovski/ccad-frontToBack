@@ -13,6 +13,8 @@ export const addNewBook = async (newTitle, newStart, newEnd) => {
             "Content-Type": "application/json",
         },
     });
+
+    return await response.json(); // returns the new book
 };
 // TODO: Create the getBooks function that retrieves all of the books that have been saved to the back-end API
 
