@@ -17,7 +17,10 @@ export const addNewBook = async (newTitle, newStart, newEnd) => {
     return await response.json(); // returns the new book
 };
 // TODO: Create the getBooks function that retrieves all of the books that have been saved to the back-end API
-
+export async function getBooks () {
+    const response = await fetch(`${API_ENDPOINT}/books`);
+    return await response.json(); // returns all books from api
+}
 // TODO: Create the updateBook function that takes the arguments id, newTitle, newStart, newEnd. Inside of the function, create a PUT request for the specified book to be updated. Return the status of the response at the end of the function.
 
 // TODO: Create the deleteBook function that takes the id of the book to be deleted as an argument. Inside of the function, create a DELETE request for the specified book to be deleted. Return the status of the response at the end of the function.
