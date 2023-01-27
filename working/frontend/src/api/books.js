@@ -39,3 +39,11 @@ export async function updateBook (id, newTitle, newStart, newEnd) {
 }
 
 // TODO: Create the deleteBook function that takes the id of the book to be deleted as an argument. Inside of the function, create a DELETE request for the specified book to be deleted. Return the status of the response at the end of the function.
+
+export async function deleteBook (id) {
+    const response = await fetch(`${API_ENDPOINT}/books/${id}`, {
+        method: "DELETE",
+    });
+
+    return response.status;
+}
